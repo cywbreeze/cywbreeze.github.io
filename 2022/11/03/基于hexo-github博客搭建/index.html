@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>基于hexo-github博客搭建 | 虞生</title><meta name="author" content="Chen Yuwei"><meta name="copyright" content="Chen Yuwei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hexo零基础搭建个人博客 Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress 插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有数百个主题和插件。   简单来说就是一个不用你写代码，就能搭建一套属于你自己的个人博客网站 应用（零基础小白也会）。  你可以在上面编写文章，做笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于hexo-github博客搭建">
+<meta property="og:url" content="http://cywbreeze.github.io/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="虞生">
+<meta property="og:description" content="Hexo零基础搭建个人博客 Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress 插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有数百个主题和插件。   简单来说就是一个不用你写代码，就能搭建一套属于你自己的个人博客网站 应用（零基础小白也会）。  你可以在上面编写文章，做笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://cywbreeze.github.io/img/cover/32.jpg">
+<meta property="article:published_time" content="2022-11-03T13:51:15.000Z">
+<meta property="article:modified_time" content="2022-11-03T14:22:33.575Z">
+<meta property="article:author" content="Chen Yuwei">
+<meta property="article:tag" content="博客搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cywbreeze.github.io/img/cover/32.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://cywbreeze.github.io/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":300,"languages":{"author":"作者: Chen Yuwei","link":"链接: ","source":"来源: 虞生","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基于hexo-github博客搭建',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-03 22:22:33'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/static/css/custom.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.png" onerror="onerror=null;src='/img/loading.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 归签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover/32.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">虞生</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 归签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基于hexo-github博客搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-03T13:51:15.000Z" title="发表于 2022-11-03 21:51:15">2022-11-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-03T14:22:33.575Z" title="更新于 2022-11-03 22:22:33">2022-11-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="基于hexo-github博客搭建"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Hexo零基础搭建个人博客"><a href="#Hexo零基础搭建个人博客" class="headerlink" title="Hexo零基础搭建个人博客"></a>Hexo零基础搭建个人博客</h1><blockquote>
+<p>Hexo是一个基于 node.js的快速生成静态博客的开源框架,支持 Markdown和大多数 Octopress 插件,一个命令即可部署到 Github页面、 Giteee、 Heroku等,强大的APl,可无限扩展,拥有数百个主题和插件。</p>
+</blockquote>
+<ul>
+<li><p>简单来说就是一个不用你写代码，就能搭建一套属于你自己的个人博客网站 应用（零基础小白也会）。</p>
+</li>
+<li><p>你可以在上面编写文章，做笔记，写日记，码代码。（一个属于你的世界！一个可供别人访问的个人世界）</p>
+</li>
+<li><p>另外Hero还提供了大量主题模版供用户下载。你的博客网站将可以时不时的换一种主题风格，赏心悦目，简直完美！</p>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><h2 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h2><h2 id="2、安装Node-js"><a href="#2、安装Node-js" class="headerlink" title="2、安装Node.js"></a>2、安装Node.js</h2><p>直接到官网上下载安装即可<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
+<li>Node自带npm</li>
+</ul>
+<hr>
+<h2 id="3、命令窗口"><a href="#3、命令窗口" class="headerlink" title="3、命令窗口"></a>3、命令窗口</h2><ul>
+<li><strong>命令窗口检查安装是否成功</strong><ul>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/1.1.6me506cbxeg0.webp" alt="1"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4、安装hexo"><a href="#4、安装hexo" class="headerlink" title="4、安装hexo"></a>4、安装hexo</h2><ul>
+<li><p><strong>① 安装命令：在cmd的命令行窗口</strong></p>
+<ul>
+<li><pre><code>npm install -g hexo-cli
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"><br>+ **② 安装完成可输入hexo -v查看版本**<br><br>  + ![1](https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/1.2.1.47e71zlu7he0.webp)<br><br>+ **③ 创建一个文件夹，位置自定义，然后在该文件夹中打开git，输入如下两条命令**<br><br>  + ```<br>    hexo init<br>    npm install<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p><strong>成功后文件夹中会出现如下文件</strong></p>
+<ul>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/1.4.1.39xl57hjf1o0.webp" alt="1"></li>
+</ul>
+</li>
+<li><p><strong>文件夹信息如下</strong></p>
+<ul>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/1.4.2.6hcyqz19xao0.webp" alt="1"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>④ 启动服务站点</strong></p>
+<ul>
+<li><p>git命令中输入如下命令</p>
+</li>
+<li><p>&#96;&#96;&#96;<br>hexo s 或者 hexo server</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"><br>  + 访问http://localhost:4000/ 至此hero就搭建好了。可以在本地访问了<br><br>    + ![1](https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/1.4.3.24qwzmgrtkn4.webp)<br><br>---<br><br>---<br><br># 二、Github上建站访问<br><br>&gt; 可在github或者gitee上建站，gitee国内访问快一些，两者的建站基本一样。<br><br>## 1、新建仓库<br><br>+ 格式必须是：用户名+.github.io 只有这样，将来要部署到Gite e page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册Github的用户名。<br>  + ![2](https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/2.1.1.6lskpq8c7ag0.webp)<br><br>---<br><br>## 2、安装hexo上传插件<br><br>+ **安装命令：目标文件夹下git面板中输入如下**<br><br>  + ```<br>    npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3、修改hexo配置文件指定仓库路径"><a href="#3、修改hexo配置文件指定仓库路径" class="headerlink" title="3、修改hexo配置文件指定仓库路径"></a>3、修改hexo配置文件指定仓库路径</h2><ul>
+<li>可在文件夹中直接打开_config.yml文件，也可通过vim直接编辑</li>
+<li>找到Deploymentdeploy:  修改如下<ul>
+<li>type: git  </li>
+<li>repo: 你的github仓库路径 （仓库的ssh key）</li>
+<li>branch: main<ul>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/2.3.72uzo2hnyj00.webp" alt="2"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;注意：&#x3D;&#x3D;在github上创建仓库，默认是main分支</li>
+</ul>
+<hr>
+<h2 id="4、推送站点到github"><a href="#4、推送站点到github" class="headerlink" title="4、推送站点到github"></a>4、推送站点到github</h2><ul>
+<li><p>推送命令: 博客文件夹下git面板</p>
+<ul>
+<li><pre><code>hexo d
+</code></pre>
+</li>
+<li><p>推送过程中需要输入你的github用户名和密码。但是在2021年8月14日开始github官方就加强安全访问。不能通过原有账号密码git访问，密码需要用官方的token或者采用ssh公私钥访问。否则会出现下图：鉴权失败（用户名密码错误）</p>
+</li>
+<li><p>也就是说需要在本机创建一个公钥，然后在github上添加该ssh公钥</p>
+</li>
+</ul>
+</li>
+<li><p>完成后可以看到仓库多了文件夹</p>
+<ul>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/2.4.3ky04g5p4j60.webp" alt="2"></li>
+</ul>
+</li>
+<li><p>扩展：</p>
+<ul>
+<li>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。</li>
+<li><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写</li>
+<li><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5、尝试访问"><a href="#5、尝试访问" class="headerlink" title="5、尝试访问"></a>5、尝试访问</h2><ul>
+<li><p>输入你的仓库名称,即可访问成功。</p>
+</li>
+<li><p><a href="https://cywbreeze.github.io/">https://cywbreeze.github.io/</a></p>
+<ul>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/2.5.6zsedv7dx0c.webp" alt="2"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h1 id="三、更换主题"><a href="#三、更换主题" class="headerlink" title="三、更换主题"></a>三、更换主题</h1><ul>
+<li><p>博客样式太死板，想换成属于自己的风格，没问题我们可以更换博客的主题，来达到我们想要的风格。到GitHub上搜索hexo主题或者hero自带的主题<a target="_blank" rel="noopener" href="https://hexo.io/themes/%E3%80%82">https://hexo.io/themes/。</a></p>
+</li>
+<li><p>找一个喜欢的。按照各自的主题文档上面一步步操作即可。</p>
+</li>
+<li><p><strong>一般步骤</strong>：</p>
+<ul>
+<li>1、下载解压，一般使用git clone 进行克隆拉取</li>
+<li>2、放到主题包themes文件夹下面</li>
+<li>3、在hero配置文件_config.yml中修改为喜欢主题的名字</li>
+<li>4、根据主题的要求进行配置，在根据自己的需求进行增加功能。</li>
+<li>5、hexo server启动即可访问</li>
+</ul>
+</li>
+<li><img src="/img/loading.gif" data-original="https://cdn.staticaly.com/gh/cywbreeze/imageBed@main/blog/3.1.ippgg416hn4.webp" alt="3" style="zoom:50%;" /></li>
+</ul>
+<hr>
+<h1 id="四、写作"><a href="#四、写作" class="headerlink" title="四、写作"></a>四、写作</h1><ul>
+<li><p>可以参考hexo文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+</li>
+<li><p>一般来说都是使用在根目录下打开git bash</p>
+</li>
+<li><p>然后使用<code>hexo new 文件名</code> ，就会在&#x2F;source&#x2F;_post下生成一个Markdown文件，然后就进行编辑即可。</p>
+</li>
+<li><p>里面的图片可以使用图床进行存储，市面上有很多图床，不过我推荐自己用github做图床，毕竟谁也不知道图床的那些公司会不会倒闭，不然图片就永久消失了。所以稳妥起见，自己搭建一个图床。</p>
+</li>
+<li><p><strong>生成图片链接流程</strong></p>
+<ul>
+<li>1、在github创建一个仓库.</li>
+<li>2、使用PicGo或者PicX，输入仓库的token，进行连接。建议使用PicX，前者有很多毛病。</li>
+<li>3、将图片拖入PicX,会生成一个连接，复制链接放到markdown相应位置即可。</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://cywbreeze.github.io">Chen Yuwei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://cywbreeze.github.io/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://cywbreeze.github.io/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://cywbreeze.github.io" target="_blank">虞生</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></div><div class="post_share"><div class="social-share" data-image="/img/cover/32.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/11/03/MySql%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"><img class="next-cover" src="/img/loading.gif" data-original="/img/cover/9.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">MySql快速入门</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.png" onerror="this.onerror=null;this.src='/img/loading.gif'" alt="avatar"/></div><div class="author-info__name">Chen Yuwei</div><div class="author-info__description">生命不息，运动不止ֹ</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/cywbreeze"><i class="fab fa-github"></i><span>GitHub</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如您喜欢我的文章，请留下您的脚印吧！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="toc-text">Hexo零基础搭建个人博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-text">一、环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85Git"><span class="toc-text">1、安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85Node-js"><span class="toc-text">2、安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3"><span class="toc-text">3、命令窗口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85hexo"><span class="toc-text">4、安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E4%BF%AE%E6%94%B9hexo%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%8C%87%E5%AE%9A%E4%BB%93%E5%BA%93%E8%B7%AF%E5%BE%84"><span class="toc-text">3、修改hexo配置文件指定仓库路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%8E%A8%E9%80%81%E7%AB%99%E7%82%B9%E5%88%B0github"><span class="toc-text">4、推送站点到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%B0%9D%E8%AF%95%E8%AE%BF%E9%97%AE"><span class="toc-text">5、尝试访问</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">三、更换主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%86%99%E4%BD%9C"><span class="toc-text">四、写作</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="基于hexo-github博客搭建"><img src="/img/loading.gif" data-original="/img/cover/32.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于hexo-github博客搭建"/></a><div class="content"><a class="title" href="/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="基于hexo-github博客搭建">基于hexo-github博客搭建</a><time datetime="2022-11-03T13:51:15.000Z" title="发表于 2022-11-03 21:51:15">2022-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/03/MySql%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="MySql快速入门"><img src="/img/loading.gif" data-original="/img/cover/9.JPG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySql快速入门"/></a><div class="content"><a class="title" href="/2022/11/03/MySql%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" title="MySql快速入门">MySql快速入门</a><time datetime="2022-11-03T09:30:42.000Z" title="发表于 2022-11-03 17:30:42">2022-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/03/java8-%E6%96%B0%E7%89%B9%E6%80%A7/" title="Java8_新特性"><img src="/img/loading.gif" data-original="/img/cover/40.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java8_新特性"/></a><div class="content"><a class="title" href="/2022/11/03/java8-%E6%96%B0%E7%89%B9%E6%80%A7/" title="Java8_新特性">Java8_新特性</a><time datetime="2022-11-03T02:51:37.000Z" title="发表于 2022-11-03 10:51:37">2022-11-03</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)"><div id="footer-wrap"><div class="copyright">&copy;2022 By Chen Yuwei</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '8TbLeVaHKgkBZhlTgkIIIAE8-gzGzoHsz',
+      appKey: 'wWysmSumqTmL24tTrujdhfcz',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://cywbreeze.github.io/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'
+    this.page.identifier = '/2022/11/03/%E5%9F%BA%E4%BA%8Ehexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'
+    this.page.title = '基于hexo-github博客搭建'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="true" async="async"></script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/2469cc0f.js","daovoice")
+</script><script>var isChatBtn = true
+daovoice('init', {
+  app_id: '2469cc0f',},{
+  launcher: { 
+     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+  },
+});
+daovoice('update');
+
+if (isChatBtn) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      daovoice('show')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: true // 悬浮 ICON 是否显示
+        },
+      });
+    }
+    function chatBtnShow () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: false // 悬浮 ICON 是否显示
+        },
+      });
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
